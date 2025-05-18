@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import logo from "../../assets/lk png.png"
-import { BiChevronDown, BiMinus, BiPhone, BiPlus, BiMenu, BiX } from "react-icons/bi"
+import {  BiPhone,  BiMenu, BiX } from "react-icons/bi"
 import { RiMvAiLine } from "react-icons/ri"
 import { Link } from "react-router-dom"
 
