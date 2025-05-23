@@ -4,6 +4,7 @@ import type React from "react"
 import { BsArrowUp, BsInstagram, BsTwitter } from "react-icons/bs"
 import { FaFacebook } from "react-icons/fa"
 import { Link } from "react-router-dom"
+import logo from "../../assets/lk png.png"
 
 interface FooterLinkProps {
   href: string
@@ -45,30 +46,20 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white py-12 px-6 md:px-12 relative">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Logo Column */}
           <div className="flex flex-col">
             <div className="mb-8">
               <img
-                src="/placeholder.svg?height=80&width=200"
-                alt="One&Only Cape Town"
+                src={logo}
+                alt="Lanka Valley Resorts"
                 width={200}
                 height={80}
-                className="invert" // Makes the logo white on black background
+                className="invert h-28 md:h-28 object-contain" // Makes the logo white on black background
               />
             </div>
           </div>
 
-          {/* Resort Information */}
-          <FooterColumn
-            title="RESORT INFORMATION"
-            links={[
-              { label: "About Us", href: "/about" },
-              { label: "Transfers", href: "/transfers" },
-              { label: "Sitemap", href: "/sitemap" },
-              { label: "Contact Us", href: "/contact" },
-            ]}
-          />
 
           {/* Terms & Conditions */}
           <FooterColumn
@@ -80,27 +71,14 @@ export default function Footer() {
             ]}
           />
 
-          {/* One&Only Resorts */}
+          {/* Quick Links */}
           <FooterColumn
-            title="ONE&ONLY RESORTS"
+            title="QUICK LINKS"
             links={[
-              { label: "One&Only", href: "/oneandonly" },
-              { label: "Our Resorts", href: "/resorts" },
-              { label: "Private Homes", href: "/private-homes" },
-              { label: "Media Centre", href: "/media" },
-              { label: "Awards", href: "/awards" },
-              { label: "Newsletter Signup", href: "/newsletter" },
-            ]}
-          />
-
-          {/* Kerzner */}
-          <FooterColumn
-            title="KERZNER"
-            links={[
-              { label: "Atlantis", href: "/atlantis" },
-              { label: "SIRO", href: "/siro" },
-              { label: "Rare Finds", href: "/rare-finds" },
-              { label: "Careers", href: "/careers" },
+              { label: "Home", href: "/" },
+              { label: "About", href: "/about" },
+              { label: "Explore", href: "/imagegrid" },
+              { label: "Contact", href: "/contact" },
             ]}
           />
         </div>
@@ -124,7 +102,7 @@ export default function Footer() {
               <span className="sr-only">Instagram</span>
             </Link>
           </div>
-          <div className="text-sm text-gray-400">2025 © KERZNER INTERNATIONAL LIMITED. ALL RIGHTS RESERVED.</div>
+          <div className="text-sm text-gray-400">©️ 2025 Lanka Valley. All Rights Reserved.</div>
         </div>
       </div>
 
